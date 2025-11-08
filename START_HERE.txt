@@ -1,0 +1,92 @@
+========================================
+  EDUHEALTH NEXUS - QUICK START GUIDE
+========================================
+
+STEP 1: Check Requirements
+---------------------------
+Double-click: check-requirements.bat
+
+This will verify you have:
+- Node.js
+- Python
+- MongoDB (optional - can use Atlas)
+
+
+STEP 2: Install & Run Everything
+---------------------------------
+Double-click: install-and-run.bat
+
+This will automatically:
+1. Install all dependencies
+2. Set up environment
+3. Start all services
+4. Open the app in your browser
+
+
+ALTERNATIVE: Manual Steps
+--------------------------
+If automatic setup doesn't work:
+
+1. Run: setup.bat
+   (Installs dependencies)
+
+2. Run: run-app.bat
+   (Starts all services)
+
+
+TROUBLESHOOTING
+---------------
+
+Problem: MongoDB connection error
+Solution: 
+- Start MongoDB service, OR
+- Use MongoDB Atlas (cloud)
+- Update MONGODB_URI in .env file
+
+Problem: Port already in use
+Solution:
+- Close other applications using ports 3000, 5000, 5001
+- Or change ports in .env file
+
+Problem: Python distutils error
+Solution:
+- Reinstall Python with "pip" option checked
+- Or use Python 3.11 or earlier
+
+
+DEFAULT LOGIN ACCOUNTS
+----------------------
+Create these via the registration form:
+
+Student:
+  Email: student@eduhealth.com
+  Password: student123
+
+Teacher:
+  Email: teacher@eduhealth.com
+  Password: teacher123
+
+Parent:
+  Email: parent@eduhealth.com
+  Password: parent123
+
+
+APPLICATION URLS
+----------------
+Frontend:   http://localhost:3000
+Backend:    http://localhost:5000
+AI Service: http://localhost:5001
+
+
+NEED HELP?
+----------
+See these files:
+- README.md
+- QUICK_START.md
+- INSTALLATION.md
+- PROJECT_DOCUMENTATION.md
+
+
+========================================
+Ready? Double-click: install-and-run.bat
+========================================

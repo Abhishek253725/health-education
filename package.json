@@ -1,0 +1,36 @@
+{
+  "name": "eduhealth-nexus",
+  "version": "1.0.0",
+  "description": "Smart Health & Mind Care System for Students",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "client": "cd frontend && npm start",
+    "ai-service": "cd ai-service && python app.py",
+    "build": "cd frontend && npm run build",
+    "dev:all": "concurrently \"npm run dev\" \"npm run client\" \"npm run ai-service\"",
+    "dev:backend": "nodemon backend/server.js",
+    "dev:frontend": "cd frontend && npm start",
+    "install:all": "npm install && cd frontend && npm install && cd ../ai-service && pip install -r requirements.txt"
+  },
+  "keywords": ["education", "health", "ai", "iot", "student"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.5.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "axios": "^1.5.0",
+    "nodemailer": "^6.9.5",
+    "pdfkit": "^0.13.0",
+    "express-validator": "^7.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "concurrently": "^8.2.1"
+  }
+}

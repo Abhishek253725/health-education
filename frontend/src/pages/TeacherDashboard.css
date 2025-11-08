@@ -1,0 +1,435 @@
+.teacher-dashboard {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.alerts-section,
+.health-concerns-section {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.alerts-grid,
+.concerns-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.alert-card,
+.concern-card {
+  background: var(--background);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--alert);
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.alert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.student-name {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.alert-score {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--alert);
+}
+
+.alert-quiz {
+  color: var(--text-secondary);
+  margin-bottom: 0.8rem;
+}
+
+.alert-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background: rgba(255, 107, 107, 0.2);
+  color: var(--alert);
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.concern-card h4 {
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.concern-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.metric {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-secondary);
+}
+
+.metric strong {
+  color: var(--text-primary);
+}
+
+.chart-section {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.chart-container {
+  max-width: 500px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.quizzes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.quiz-item {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quiz-info h3 {
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.quiz-info p {
+  color: var(--text-secondary);
+  margin-bottom: 0.8rem;
+}
+
+.quiz-meta {
+  display: flex;
+  gap: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.quiz-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-icon {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: var(--background);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-primary);
+}
+
+.btn-icon:hover {
+  background: var(--secondary);
+  color: var(--white);
+}
+
+.btn-icon.danger:hover {
+  background: var(--alert);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.modal-content {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-content h2 {
+  margin-bottom: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.questions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0 1rem;
+}
+
+.btn-add-question {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.question-item {
+  background: var(--background);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.question-item input[type="text"] {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #E2E8F0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.option-input {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.option-input input[type="text"] {
+  flex: 1;
+  padding: 0.6rem;
+  border: 2px solid #E2E8F0;
+  border-radius: 8px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+/* Students Section */
+.students-section {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.btn-create,
+.btn-attendance,
+.btn-download {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--gradient);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-attendance {
+  background: linear-gradient(135deg, #FFD166, #FF6B6B);
+}
+
+.btn-download {
+  background: linear-gradient(135deg, #00C9A7, #00A389);
+}
+
+.btn-create:hover,
+.btn-attendance:hover,
+.btn-download:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(108, 99, 255, 0.3);
+}
+
+.students-table-container {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.students-table thead {
+  background: var(--background);
+}
+
+.students-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-primary);
+  border-bottom: 2px solid #E2E8F0;
+}
+
+.students-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  color: var(--text-secondary);
+}
+
+.students-table tbody tr {
+  transition: all 0.3s ease;
+}
+
+.students-table tbody tr:hover {
+  background: var(--background);
+}
+
+.student-name-cell {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.score-badge,
+.health-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: inline-block;
+}
+
+.score-badge.excellent {
+  background: rgba(0, 201, 167, 0.2);
+  color: var(--primary);
+}
+
+.score-badge.good {
+  background: rgba(108, 99, 255, 0.2);
+  color: var(--secondary);
+}
+
+.score-badge.average {
+  background: rgba(255, 209, 102, 0.2);
+  color: #CC9A00;
+}
+
+.score-badge.poor {
+  background: rgba(255, 107, 107, 0.2);
+  color: var(--alert);
+}
+
+.health-badge.good {
+  background: rgba(0, 201, 167, 0.2);
+  color: var(--primary);
+}
+
+.health-badge.warning {
+  background: rgba(255, 209, 102, 0.2);
+  color: #CC9A00;
+}
+
+.health-badge.danger {
+  background: rgba(255, 107, 107, 0.2);
+  color: var(--alert);
+}
+
+.latest-health {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.no-data {
+  color: #94A3B8;
+  font-style: italic;
+}
+
+.no-students {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-secondary);
+}
+
+.no-students svg {
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.btn-cancel {
+  padding: 0.8rem 1.5rem;
+  background: transparent;
+  border: 2px solid var(--text-secondary);
+  color: var(--text-secondary);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-submit {
+  padding: 0.8rem 1.5rem;
+  background: var(--gradient);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
